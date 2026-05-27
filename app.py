@@ -119,7 +119,7 @@ if st.button("🔍 Check Website", use_container_width=True):
 
     # Predict
     prediction = selected_model.predict(input_scaled)[0]
-if hasattr(selected_model, 'predict_proba'):
+    if hasattr(selected_model, 'predict_proba'):
         probability = selected_model.predict_proba(input_scaled)[0]
         confidence = max(probability) * 100
     else:
